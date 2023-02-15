@@ -1,15 +1,15 @@
 
 version: '3'
 services:
-  wanglab-jupyter-template:
+  wanglab-jupyter-qiime2:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: wanglab-jupyter-template
+    container_name: wanglab-jupyter-qiime2
     volumes:
       - .:/home/jovyan/work:rw
     ports:
-    - "9000:9000"
+    - "9574:9000"
     restart: unless-stopped
     command: jupyter lab --ip='*' --port=9000 --no-browser --NotebookApp.token='${LOGINPASSWORD:-PASSWORD}' --allow-root
     networks:
@@ -20,9 +20,9 @@ services:
        limits:
          memory: 16000M
     environment:
-      VIRTUAL_HOST: jupytertemplate.wanglab.science
+      VIRTUAL_HOST: qiime2.wanglab.science
       VIRTUAL_PORT: 9000
-      LETSENCRYPT_HOST: jupytertemplate.wanglab.science
+      LETSENCRYPT_HOST: qiime2.wanglab.science
       LETSENCRYPT_EMAIL: mwang87@gmail.com
 
 networks:
