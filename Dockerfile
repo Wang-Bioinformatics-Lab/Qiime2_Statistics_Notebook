@@ -12,4 +12,4 @@ RUN wget https://data.qiime2.org/distro/core/qiime2-2019.4-py36-linux-conda.yml
 RUN mamba env create -n qiime2-2019.4 --file qiime2-2019.4-py36-linux-conda.yml
 
 # Installing GNPS Data Package
-RUN pip install git+https://github.com/Wang-Bioinformatics-Lab/GNPSDataPackage.git@cf9d9cc1d2eb3826bf397547249afda0e7ade169
+RUN pip install git+https://github.com/Wang-Bioinformatics-Lab/GNPSDataPackage.git@2035cd2aa27dd29e311c7a9e171abf7f2207789a
