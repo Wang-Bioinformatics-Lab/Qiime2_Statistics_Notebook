@@ -1,4 +1,7 @@
-## Wang Bioinformatics Lab Data Science Template
+## Qiime2 GNPS - Metabolomics Notebooks
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook/HEAD?labpath=src%2Fjupyternotebook.ipynb)
+
 
 Here we are able to launch a notebook inside of docker with all the dependencies you would want. 
 
