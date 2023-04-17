@@ -1,6 +1,6 @@
 ## Qiime2 GNPS - Metabolomics Notebooks
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook/HEAD?labpath=src%2Fjupyternotebook.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook/HEAD?labpath=src%2Fgnps_qiime2.ipynb)
 
 
 Here we are able to launch a notebook inside of docker with all the dependencies you would want. 
