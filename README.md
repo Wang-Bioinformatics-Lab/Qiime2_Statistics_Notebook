@@ -31,3 +31,25 @@ Additional documentation will go into docs.
 ### Best Practices
 
 Commit and save changes often and push to github. 
+
+### Running this locally
+
+```
+# Installing Mamba
+conda install -c conda-forge mamba
+
+mamba create -n qiime2-notebook python=3.9
+conda activate qiime2-notebook
+pip install -r requirements.txt
+pip install jupyterlab-git
+
+# Installing GNPS Data Package
+RUN pip install git+https://github.com/Wang-Bioinformatics-Lab/GNPSDataPackage.git@2035cd2aa27dd29e311c7a9e171abf7f2207789a
+
+# Installing Qiime2
+RUN wget https://data.qiime2.org/distro/core/qiime2-2019.4-py36-linux-conda.yml
+RUN mamba env create -n qiime2-2019.4 --file qiime2-2019.4-py36-linux-conda.yml
+
+# Start up Jupyter
+jupyter lab .
+```
