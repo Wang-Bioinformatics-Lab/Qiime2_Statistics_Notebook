@@ -41,6 +41,7 @@ conda install -c conda-forge mamba
 mamba create -n qiime2-notebook python=3.9
 conda activate qiime2-notebook
 pip install -r requirements.txt
+pip install jupyterlab
 pip install jupyterlab-git
 
 # Installing GNPS Data Package
