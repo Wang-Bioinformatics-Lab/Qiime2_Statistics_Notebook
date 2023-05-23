@@ -11,7 +11,6 @@ services:
     ports:
     - "9574:9000"
     restart: unless-stopped
-    #command: source activate qiime2 && jupyter lab --ip='*' --port=9000 --no-browser --NotebookApp.token='${LOGINPASSWORD:-PASSWORD}' --allow-root
     command: /home/jovyan/run_server.sh
     networks:
     - default
