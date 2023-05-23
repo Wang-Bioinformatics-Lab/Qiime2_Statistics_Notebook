@@ -7,11 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: wanglab-jupyter-qiime2
     volumes:
-      - .:/home/jovyan/work:rw
+      - .:/home/jovyan:rw
     ports:
     - "9574:9000"
     restart: unless-stopped
-    command: jupyter lab --ip='*' --port=9000 --no-browser --NotebookApp.token='${LOGINPASSWORD:-PASSWORD}' --allow-root
+    #command: source activate qiime2 && jupyter lab --ip='*' --port=9000 --no-browser --NotebookApp.token='${LOGINPASSWORD:-PASSWORD}' --allow-root
+    command: /home/jovyan/run_server.sh
     networks:
     - default
     - nginx-net
@@ -24,6 +25,7 @@ services:
       VIRTUAL_PORT: 9000
       LETSENCRYPT_HOST: qiime2.wanglab.science
       LETSENCRYPT_EMAIL: mwang87@gmail.com
+      NB_PASSWORD: ${LOGINPASSWORD:-PASSWORD}
 
 networks:
   nginx-net:

@@ -20,3 +20,6 @@ coder-compose-background:
 
 coder-stop:
 	docker-compose -f docker-compose-coder.yml down
+
+attach:
+	docker exec -i -t wanglab-jupyter-qiime2 /bin/bash
