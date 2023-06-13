@@ -8,3 +8,10 @@ requests
 plotly
 jupyterlab
 jupyterlab-git
+numpy
+scikit-learn
+scikit-bio
+pingouin
+kaleido
+ipyfilechooser
+nbformat
