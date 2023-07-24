@@ -9,17 +9,6 @@ jupyter-compose-background:
 
 jupyter-stop:
 	docker-compose -f docker-compose.yml down
-
-coder-compose:
-	docker-compose -f docker-compose-coder.yml --compatibility build
-	docker-compose -f docker-compose-coder.yml --compatibility up
-
-coder-compose-background:
-	docker-compose -f docker-compose-coder.yml --compatibility build
-	docker-compose -f docker-compose-coder.yml --compatibility up -d
-
-coder-stop:
-	docker-compose -f docker-compose-coder.yml down
-
+	
 attach:
 	docker exec -i -t wanglab-jupyter-qiime2 /bin/bash
