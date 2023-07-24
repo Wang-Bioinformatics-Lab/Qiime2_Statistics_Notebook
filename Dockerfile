@@ -1,5 +1,8 @@
 FROM continuumio/miniconda3:4.10.3
 
+# Making sure we have libarchive
+RUN apt-get update && apt-get install -y libarchive-dev
+
 # Installing Mamba
 RUN conda install -c conda-forge mamba
 
