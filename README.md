@@ -16,10 +16,6 @@ Here we are able to launch a notebook inside of docker with all the dependencies
 
 make jupyter-compose
 
-### Launching Coder
-
-make coder-compose
-
 ### Layout
 
 All your code for notebooks will go in src. 
