@@ -16,6 +16,8 @@ Here we are able to launch a notebook inside of docker with all the dependencies
 
 make jupyter-compose
 
+You can then access it via http://localhost:9574
+
 ### Layout
 
 All your code for notebooks will go in src. 
