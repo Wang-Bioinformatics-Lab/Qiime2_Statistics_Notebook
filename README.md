@@ -32,6 +32,8 @@ Commit and save changes often and push to github.
 
 ### Running this locally
 
+You will need to install conda prior to this. 
+
 ```
 # Installing Mamba
 conda install -c conda-forge mamba
