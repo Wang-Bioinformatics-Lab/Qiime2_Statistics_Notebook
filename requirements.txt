@@ -15,3 +15,4 @@ pingouin
 kaleido
 ipyfilechooser
 nbformat
+pynmranalysis.normalization
