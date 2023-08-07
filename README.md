@@ -5,13 +5,15 @@
 
 Here we are able to launch a notebook inside of docker with all the dependencies you would want. 
 
-### Customizing Docker for you
-
+### Customizing Docker for Windows
+...
+1. Clone the repository - run "git clone https://github.com/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook"
 1. Update dependencies - change the requirements.txt
-1. Update your password - create an .env file with LOGINPASSWORD=YOUR_PASSWORD or else it will not be available
-1. Update the port for the server - change port 9000 to something around 9000, but not 9000 in docker-compose.yml or docker-compose-coder.yml
-1. Change the name of the container - change wanglab-jupyter in docker-compose.yml or docker-compose-coder.yml
-
+1. Open the repository in command prompt - run "cd {insert repository location}"
+1. Build the image - run in the command prompt "docker build -t {image name} ."
+1. Run the container - run in the command promt "docker run -d -p 8888:8888 {image name}"
+1. Connect to the Jupyter Notebook at http://localhost:8888/, the default token is "password"
+...
 ### Launching the Jupyter Notebook
 
 make jupyter-compose
