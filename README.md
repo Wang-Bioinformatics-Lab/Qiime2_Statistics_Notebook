@@ -7,18 +7,13 @@ Here we are able to launch a notebook inside of docker with all the dependencies
 
 ### Customizing Docker for Windows
 ```
-1. Clone the repository - run "git clone https://github.com/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook"
+1. Clone the repository - run "git clone https://github.com/Wang-Bioinformatics-Lab/Qiime2_Statistics_Notebook.git"
 2. Update dependencies - change the requirements.txt
-3. Open the repository in command prompt - run "cd {insert repository location}"
+3. Open the repository in the command prompt - run "cd {insert repository location}"
 4. Build the image - run in the command prompt "docker build -t {image name} ."
-5. Run the container - run in the command promt "docker run -d -p 8888:8888 {image name}"
+5. Run the container - run in the command prompt "docker run -d -p 8888:8888 {image name}"
 6. Connect to the Jupyter Notebook at http://localhost:8888/, the default token is "password"
 ```
-### Launching the Jupyter Notebook
-
-make jupyter-compose
-
-You can then access it via http://localhost:9574
 
 ### Layout
 
