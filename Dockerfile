@@ -1,10 +1,15 @@
-FROM continuumio/miniconda3:4.10.3
+FROM ubuntu:22.04
 
 # Making sure we have libarchive
-RUN apt-get update && apt-get install -y libarchive-dev
+RUN apt-get update && apt-get install -y build-essential libarchive-dev wget vim git
 
-# Installing Mamba
-RUN conda install -c conda-forge mamba
+# Install Mamba
+ENV CONDA_DIR /opt/conda
+RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O ~/miniforge.sh && /bin/bash ~/miniforge.sh -b -p /opt/conda
+ENV PATH=$CONDA_DIR/bin:$PATH
+
+# Adding to bashrc
+RUN echo "export PATH=$CONDA_DIR:$PATH" >> ~/.bashrc
 
 # Installing Qiime2
 RUN wget https://data.qiime2.org/distro/core/qiime2-2023.2-py38-linux-conda.yml
@@ -17,6 +22,11 @@ RUN /bin/bash -c ". activate qiime2 && pip install -r /requirements.txt"
 RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/Wang-Bioinformatics-Lab/GNPSDataPackage.git@2035cd2aa27dd29e311c7a9e171abf7f2207789a"
 
 RUN /bin/bash -c ". activate qiime2 && jupyter serverextension enable --py qiime2 --sys-prefix"
+
+# Installing Specific Plugins for Metabolomics
+RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_normalization_plugin.git"
+RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_imputation_plugin.git"
+RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_blank_removal_plugin.git"
 
 ## Setting up the proper permissions
 ARG NB_USER=jovyan
