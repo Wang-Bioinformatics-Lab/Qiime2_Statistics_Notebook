@@ -24,9 +24,9 @@ RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/Wang-B
 RUN /bin/bash -c ". activate qiime2 && jupyter serverextension enable --py qiime2 --sys-prefix"
 
 # Installing Specific Plugins for Metabolomics
-RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_normalization_plugin.git"
-RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_imputation_plugin.git"
-RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_blank_removal_plugin.git"
+#RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_normalization_plugin.git@d695201694191eb168942124bea1faca80f7ffc2"
+#RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_imputation_plugin.git@edce69bce04cd653ec22b4ee0327af366a278106"
+#RUN /bin/bash -c ". activate qiime2 && pip install git+https://github.com/pluckySquid/qiime2_blank_removal_plugin.git@384c58f4a1a2b65308bbd494b52d7cbe54fdb889"
 
 ## Setting up the proper permissions
 ARG NB_USER=jovyan
